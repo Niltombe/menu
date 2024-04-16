@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel='stylesheet'
+href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU.GOD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo"><img src="img/7955bart_400x400.jpg" alt=""></div>
+      <div class="menu">
+        <nav>
+          <a href="#">home</a>
+          <a href="#">projetos</a>
+          <a href="#">sobre</a>
+          <a href="#">contato</a>
+        </nav>
+      </div>
+      <div class="social">
+        <a href="#"><button><i
+class="fi fi-brands-instagram"></i></button></a>
+        <a href="#"><button><i
+class="fi fi-brands-linkedin"></i></button></a>
+        <a href="#"><button><i class="fi
+fi-brands-github"></i></button></a>
+      </div>
+      <button class="menu-toggle">Menu</button>
+    </div>
+  </header>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function(){
+      document.querySelector('.menu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

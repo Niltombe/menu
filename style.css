@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@100..900&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+  }
+
+  .container{
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+  }
+
+  header{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    box-shadow: 0px 3px 10px #f50843;
+  }
+
+  .logo img{
+    width: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Ajuste para alinhar à direita */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu nav{
+    display: flex;
+    flex-direction: row; /* Alteração para exibir em linha */
+  }
+
+  .menu nav a{
+    color: #ff092a;
+    width: 100px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+  }
+
+  nav a:hover {
+    color: rgb(15, 218, 15);
+    transform: translateY(-10px);
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .social button{
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(45deg, #e00808, #34449e);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .social button i{
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .menu-toggle{
+    display: none;
+    background-color: transparent;
+    border: 1px solid #ffffff; /* Alteração para botão branco */
+    color: #ffffff; /* Alteração para botão branco */
+    padding: 5px 10px; /* Alteração para botão branco */
+    border-radius: 5px; /* Alteração para botão branco */
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 130px;
+      right: 0;
+      background-color: #000000;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0px 3px 10px #eb0404;
+    }
+
+    .menu-toggle{
+      display: block;
+    }
+
+    .menu-toggle + .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .menu.active nav {
+      flex-direction: column;
+    }
+  }
+
+  body{
+    background-color: #000000;
+  }
